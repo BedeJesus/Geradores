@@ -1,4 +1,4 @@
-import { Container, Section, Options, Inner_section,Span } from "./styles";
+import { Container, Section, Options, Inner_section, Span,Check, Input, CheckBox } from "./styles";
 
 export default function Form() {
     return (
@@ -11,38 +11,36 @@ export default function Form() {
                     <Section>
 
                         <Inner_section>
-                            <Span>Número de caracters da senha</Span>
-                            <input type="number" />
+                            <Span>Número de caracteres da senha</Span>
+                            <Input type="number"placeholder="Ex: 8" />
                         </Inner_section>
 
                         <Inner_section>
                             <Span>Resultado:</Span>
-                            <input type="text" />
+                            <Input type="text" />
 
                         </Inner_section>
 
                     </Section>
 
 
-
-
                     <Section>
 
-                        <div>
+                        <Check>
+                            <CheckBox type="checkbox" />
                             <Span>Letra Maiúscula</Span>
-                            <input type="checkbox" />
-                        </div>
+                        </Check>
 
-                        <div>
+                        <Check>
+                            <CheckBox type="checkbox" />
                             <Span>Números</Span>
-                            <input type="checkbox" />
-                        </div>
+                        </Check>
 
-                        <div>
+                        <Check>
+                            <CheckBox type="checkbox" />
                             <Span>Símbolos</Span>
-                            <input type="checkbox" />
-                        </div>
-                        
+                        </Check>
+
                     </Section>
 
                 </Options>
