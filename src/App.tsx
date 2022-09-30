@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { ThemeProvider } from 'styled-components'
-import Form from './components/Form';
+import Password from './components/Password';
 import Header from './components/Header';
 import GlobalStyle from './styles/global'
 import dark from './styles/themes/dark';
+import Number from './components/Number';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Header />
-        <Form/>
+        <Password/>
+        <Number/>
+
       </div>
     </ThemeProvider>
   );

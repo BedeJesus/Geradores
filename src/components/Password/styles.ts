@@ -4,19 +4,17 @@ export const Container = styled.div`
 
 display: flex;
 flex-direction: column;
-justify-content: center;
-align-items: center;
-
+align-items: center; 
 margin: 3%;
 border: 3px solid white;
 border-radius: 10px;
-
 color: ${props => props.theme.colors.text};
 background-color: ${props => props.theme.colors.secundary_background};
+box-shadow: 0 0 15px 2px black;
+
 
 `
 export const Section = styled.div`
-
 display: flex;
 flex-direction: column;
 padding: 2%;
@@ -25,27 +23,23 @@ padding: 2%;
 
 export const Options = styled.div`
 display: flex;
-
+justify-content: space-around;
 `
 export const Inner_section = styled.div`
 display: flex;
 flex-direction: column;
-margin: 2%;
-
+margin: 3% 0  ;
+width: 25em; // fazer alterar depois para fazer responsivo
 `
 
 export const Span = styled.span`
 font-size: 1.7em;
-
-
 `
-
 export const Check = styled.div`
-
-width: 15.5em;
-margin: 6.5% 0;
+margin: 5% 0% 5% 0%;
+width: 14em;
+display: flex;
 `
-
 export const Input = styled.input`
 
 background-color: ${props => props.theme.colors.primary_background};
@@ -73,10 +67,8 @@ padding: 0.4%;
     }    
 `
 
-export const CheckBox = styled.input.attrs({type:"checkbox"})`
-
-height:50%;
+export const CheckBox = styled.input.attrs({ type: "checkbox" })`
 width: 8%;
-margin-right: 6%;
+margin-right: 2%;
 
 `
