@@ -4,9 +4,13 @@ import {ThemeContext} from 'styled-components'
 
 import { Container } from './styles';
 
-export default function Header(){
+interface Props{
+    toggleTheme():void;
+}
 
-    const {colors} = useContext(ThemeContext)
+const Header: React.FC<Props> = ({toggleTheme}) =>{
+
+    const {colors,title} = useContext(ThemeContext)
 
 
     return(
@@ -14,8 +18,8 @@ export default function Header(){
         <h1> Gerador </h1>
 
         <Switch
-        onChange={() =>{}}
-        checked={false}
+        onChange={toggleTheme}
+        checked={title ==='light'}
         checkedIcon={false}
         uncheckedIcon={false}
         height={15}
@@ -28,3 +32,5 @@ export default function Header(){
         </Container>
     )
 }
+
+export default Header

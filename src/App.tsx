@@ -1,6 +1,8 @@
 import React,{useState} from 'react';
 
 import { ThemeProvider } from 'styled-components'
+import usePersistedState from './utils/usePersistedState';
+
 import Password from './components/Password';
 import Header from './components/Header';
 import GlobalStyle from './styles/global'
@@ -10,17 +12,17 @@ import Number from './components/Number';
 
 function App() {
 
-  const [theme,setTheme] = useState(dark)
+  const [theme,setTheme] = usePersistedState('theme',light)
 
   const toggleTheme = () =>{
-    setTheme(theme.title ==='dark'? dark: light)
+    setTheme(theme.title ==='light'? dark: light)
   }
 
   return (
-    <ThemeProvider theme={dark}>
+    <ThemeProvider theme={theme}>
       <div className="App">
         <GlobalStyle />
-        <Header /> 
+        <Header toggleTheme ={toggleTheme} /> 
         <Password/>
         <Number/>
 
