@@ -1,33 +1,33 @@
-import React,{useContext} from 'react';
+import React, { useContext } from 'react';
 import Switch from 'react-switch'
-import {ThemeContext} from 'styled-components'
+import { ThemeContext } from 'styled-components'
 
 import { Container } from './styles';
 
-interface Props{
-    toggleTheme():void;
+interface Props {
+    toggleTheme(): void;
 }
 
-const Header: React.FC<Props> = ({toggleTheme}) =>{
+const Header: React.FC<Props> = ({ toggleTheme }) => {
 
-    const {colors,title} = useContext(ThemeContext)
+    const { colors, title } = useContext(ThemeContext)
 
 
-    return(
+    return (
         <Container>
-        <h1> Gerador </h1>
+            <h1> Gerador </h1>
 
-        <Switch
-        onChange={toggleTheme}
-        checked={title ==='light'}
-        checkedIcon={false}
-        uncheckedIcon={false}
-        height={15}
-        width={40}
-        handleDiameter={20}
-        offColor={colors.primary}
-        onColor={colors.secundary}
-        />
+            <Switch
+                onChange={toggleTheme}
+                checked={title === 'light'}
+                checkedIcon={false}
+                uncheckedIcon={false}
+                height={15}
+                width={40}
+                handleDiameter={20}
+                offColor={colors.primary}
+                onColor={colors.secundary}
+            />
 
         </Container>
     )
