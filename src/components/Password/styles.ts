@@ -70,5 +70,6 @@ padding: 0.4%;
 export const CheckBox = styled.input.attrs({ type: "checkbox" })`
 width: 8%;
 margin-right: 2%;
+margin-top: 1.5%;
 
 `

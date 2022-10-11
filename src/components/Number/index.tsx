@@ -13,19 +13,19 @@ export default function Number() {
                     
                     <Inner_section>
                         <Span>Número Inicial</Span>
-                        <Input type="number" placeholder="Ex: 8" />
+                        <Input type="number" placeholder="Ex: 2" />
                     </Inner_section>
 
                     <Inner_section>
                         <Span>Número Final</Span>
-                        <Input type="number" />
+                        <Input type="number" placeholder="Ex: 9" />
                     </Inner_section>
 
                 </Options>
 
                 <Inner_section>
                     <Span>Resultado:</Span>
-                    <Input type="text" />
+                    <Input type="text"  />
                 </Inner_section>
 
             </Section>
