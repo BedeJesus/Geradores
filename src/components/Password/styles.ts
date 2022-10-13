@@ -10,7 +10,7 @@ border: 3px solid white;
 border-radius: 10px;
 color: ${props => props.theme.colors.text};
 background-color: ${props => props.theme.colors.primary};
-box-shadow: 0 0 15px 2px black;
+box-shadow: 0 0 15px 1px black;
 
 
 `

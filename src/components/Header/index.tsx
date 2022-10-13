@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
-
-import { Container } from './styles';
+import { Sun, Moon } from 'phosphor-react';
+import { Container,Mooon } from './styles';
 
 interface Props {
     toggleTheme(): void;
@@ -17,17 +17,30 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <Container>
             <h1> Geradores </h1>
 
-            <Switch
-                onChange={toggleTheme}
-                checked={title === 'light'}
-                checkedIcon={false}
-                uncheckedIcon={false}
-                height={15}
-                width={40}
-                handleDiameter={20}
-                offColor={colors.primary}
-                onColor={colors.secundary}
-            />
+
+
+            <div>
+                <Moon size={23} />
+                
+
+                <Switch
+                    onChange={toggleTheme}
+                    checked={title === 'light'}
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                    height={15}
+                    width={40}
+                    handleDiameter={20}
+                    offColor={colors.primary}
+                    onColor={colors.secundary}
+                    
+                />
+
+                <Sun size={23} />
+
+
+            </div>
+
 
         </Container>
     )

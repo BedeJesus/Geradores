@@ -12,3 +12,8 @@ color: ${props => props.theme.colors.text};
 
 
 `
+
+export const Mooon = styled.div`
+display: flex;
+flex-direction: row;
+`

@@ -3,7 +3,7 @@ import { Container, Section, Options, Inner_section, Span, Check, Input, CheckBo
 export default function Password() {
     return (
         <Container>
-            <h1>Crie sua senha</h1>
+            <h1>Gere sua senha</h1>
 
             <Options>
                 <Section>
