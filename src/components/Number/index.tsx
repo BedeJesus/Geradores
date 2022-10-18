@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Container, Section, Inner_section, Span, Input, Options } from "./styles";
+import { Container, Section, Inner_section, Span, Input, Options,Buttons,Button,CopyPaste } from "./styles";
+import { Copy, ArrowCounterClockwise } from 'phosphor-react';
 
 
 
@@ -51,6 +52,20 @@ export default function Number() {
                     <Span>Resultado:</Span>
                     <Input type="number" value={randomNumber()} />
                 </Inner_section>
+
+                <Buttons>
+
+                        <CopyPaste>
+                            <Button> <Copy size={35} weight="fill" /></Button>
+                            <Span>Copiar</Span>
+                        </CopyPaste>
+
+                        <CopyPaste>
+                            <Button> <ArrowCounterClockwise size={30} weight="bold" /> </Button>
+                            <Span>Gerar</Span>
+                        </CopyPaste>
+
+                    </Buttons>
 
             </Section>
 

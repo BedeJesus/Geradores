@@ -1,5 +1,6 @@
-import { Container, Section, Options, Inner_section, Span, Check, Input, CheckBox } from "./styles";
+import { Container, Section, Options, Inner_section, Span, Check, Input, CheckBox, Buttons, CopyPaste, Button } from "./styles";
 import React, { useState } from "react";
+import { Copy, ArrowCounterClockwise } from 'phosphor-react';
 
 export default function Password() {
 
@@ -15,31 +16,31 @@ export default function Password() {
         const symbols: string[] = ["!", "@", "#", "$", "%", "&", "*"]
         const letters = Array.from(Array(26)).map((_, i) => i + 97)
         const lowerletters = letters.map((letter) => String.fromCharCode(letter))
-        const upperletters = lowerletters.map((letter) => (letter.toUpperCase()))
+        const upperLetters = lowerletters.map((letter) => (letter.toUpperCase()))
 
-        const password: string[] = []
-
-        password.concat(lowerletters)
+        let characters = lowerletters
 
         if (checkUpperCase) {
-            password.concat(upperletters)
+            characters = characters.concat(upperLetters)
         }
 
         if (checkNumber) {
-            password.concat(numbers)
+            characters = characters.concat(numbers)
         }
 
         if (CheckSymbols) {
-            password.concat(symbols)
+            characters = characters.concat(symbols)
         }
 
-
-        for (let i = 0; i <= length; i++) {
-
+        const password: string[] = []
+        for (let i = 1; i <= length; i++) {
+            const character = characters[Math.floor(Math.random() * characters.length)]
+            password.push(character)
 
         }
 
-    
+        return password.join('')
+
     }
 
     return (
@@ -48,9 +49,6 @@ export default function Password() {
 
             <Options>
                 <Section>
-                    <>
-                    {console.log(generatePassword())}
-                    </>
 
                     <Inner_section>
                         <Span>Número de caracteres da senha </Span>
@@ -58,10 +56,23 @@ export default function Password() {
                     </Inner_section>
 
                     <Inner_section>
-                        <Span>Resultado:</Span>
-                        <Input type="text"  />
-
+                        <Span>Resultado</Span>
+                        <Input type="text" value={generatePassword()} />
                     </Inner_section>
+
+                    <Buttons>
+
+                        <CopyPaste>
+                            <Button> <Copy size={35} weight="fill" /></Button>
+                            <Span>Copiar</Span>
+                        </CopyPaste>
+
+                        <CopyPaste>
+                            <Button> <ArrowCounterClockwise size={30} weight="bold" /> </Button>
+                            <Span>Gerar</Span>
+                        </CopyPaste>
+
+                    </Buttons>
 
                 </Section>
 

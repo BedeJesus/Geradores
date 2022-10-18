@@ -45,7 +45,7 @@ export const Input = styled.input`
 background-color: ${props => props.theme.colors.primary_background};
 border-color: black;
 border-radius: 6px;
-color: white;
+color: ${props => props.theme.colors.text};
 padding: 0.4%;
 
 ::placeholder {
@@ -73,3 +73,38 @@ margin-right: 2%;
 margin-top: 1.5%;
 
 `
+export const Buttons = styled.div`
+display: flex;
+justify-content: space-around;
+`
+
+export const CopyPaste = styled.button`
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: transparent;
+border: none;
+padding:0.5% 2%;
+border-radius: 10px;
+color:${props => props.theme.colors.text}; 
+ :hover{
+  background-color: ${props => props.theme.colors.primary_background};
+  transition: .3s;
+  cursor: pointer;
+
+ }
+`
+
+export const Button = styled.button`
+background-color: transparent;
+color:${props => props.theme.colors.text};
+border:none;
+margin-top:3%;
+margin-right: 4%;
+:hover{
+  cursor: pointer;
+}
+`
+
+
+
