@@ -1,16 +1,18 @@
 import { Container, Section, Options, Inner_section, Span, Check, Input, CheckBox, Buttons, CopyPaste, Button } from "./styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Copy, ArrowCounterClockwise } from 'phosphor-react';
 
 export default function Password() {
-
 
     const [length, setLength] = useState(0)
     const [checkUpperCase, setcheckUpperCase] = useState(false)
     const [checkNumber, setcheckNumber] = useState(false)
     const [CheckSymbols, setCheckSymbols] = useState(false)
+    const [reload, setReload] = useState(false)
+    const [password, setPassword] = useState('')
 
-    function generatePassword() {
+
+    useEffect(() => {
 
         const numbers: string[] = ["0", "1", "2", "3", "4", '5', '6', '7', "8", "9"]
         const symbols: string[] = ["!", "@", "#", "$", "%", "&", "*"]
@@ -39,8 +41,17 @@ export default function Password() {
 
         }
 
-        return password.join('')
+        setPassword(password.join(''))
 
+    }, [length, checkUpperCase, checkNumber, CheckSymbols, reload])
+
+
+    function GenerateOtherPassword() {
+        reload ? setReload(false) : setReload(true)
+    }
+
+    function CopyPassword() {
+        navigator.clipboard.writeText(password)
     }
 
     return (
@@ -51,23 +62,23 @@ export default function Password() {
                 <Section>
 
                     <Inner_section>
-                        <Span>Número de caracteres da senha </Span>
+                        <Span>Número de caracteres da senha</Span>
                         <Input type="number" placeholder="Ex: 8" onChange={(e: React.FormEvent<HTMLInputElement>) => setLength(parseInt(e.currentTarget.value))} />
                     </Inner_section>
 
                     <Inner_section>
                         <Span>Resultado</Span>
-                        <Input type="text" value={generatePassword()} />
+                        <Input type="text" value={password} />
                     </Inner_section>
 
                     <Buttons>
 
-                        <CopyPaste>
+                        <CopyPaste onClick={() => CopyPassword()}>
                             <Button> <Copy size={35} weight="fill" /></Button>
                             <Span>Copiar</Span>
                         </CopyPaste>
 
-                        <CopyPaste>
+                        <CopyPaste onClick={() => GenerateOtherPassword()}>
                             <Button> <ArrowCounterClockwise size={30} weight="bold" /> </Button>
                             <Span>Gerar</Span>
                         </CopyPaste>

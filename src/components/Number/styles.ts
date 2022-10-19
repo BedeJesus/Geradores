@@ -1,25 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 3%;
+margin: 1em 3% 1em 3%;
 border: 3px solid white;
 border-radius: 10px;
 color: ${props => props.theme.colors.text};
 background-color: ${props => props.theme.colors.primary};
-box-shadow: 0 0 15px 2px black;
-
-
+box-shadow: 0 0 10px 2px black;
 `
 export const Section = styled.div`
-
 display: flex;
 flex-direction: column;
-
-
 padding: 2%;
 
 `
@@ -28,29 +22,22 @@ display: flex;
 flex-direction: column;
 margin: 2% 0% ;
 padding:0 1em 0 1em;
-
 `
 
 export const Span = styled.span`
 font-size: 1.7em;
-
-
 `
 export const Options = styled.div`
 display: flex;
-
-
 `
 
-
-
 export const Input = styled.input`
-
 background-color: ${props => props.theme.colors.primary_background};
 border-color: black;
 border-radius: 6px;
+font-size: medium;
 color: ${props => props.theme.colors.text};
-padding: 0.4%;
+padding: 0.5% 0.5% 0.5% 2%;
 
 ::placeholder {
     color: palevioletred;
@@ -82,7 +69,7 @@ justify-content: center;
 align-items: center;
 background-color: transparent;
 border: none;
-padding:0.5% 2%;
+padding:0.5% 5%;
 border-radius: 10px;
 color:${props => props.theme.colors.text}; 
  :hover{

@@ -5,7 +5,7 @@ export const Container = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center; 
-margin: 3%;
+margin: 2% 3% 1% 3%;
 border: 3px solid white;
 border-radius: 10px;
 color: ${props => props.theme.colors.text};
@@ -36,7 +36,7 @@ export const Span = styled.span`
 font-size: 1.7em;
 `
 export const Check = styled.div`
-margin: 5% 0% 5% 0%;
+margin: 6% 0% 5% 0%;
 width: 14em;
 display: flex;
 `
@@ -45,8 +45,9 @@ export const Input = styled.input`
 background-color: ${props => props.theme.colors.primary_background};
 border-color: black;
 border-radius: 6px;
+font-size: medium;
 color: ${props => props.theme.colors.text};
-padding: 0.4%;
+padding: 0.5% 0.5% 0.5% 2%;
 
 ::placeholder {
     color: palevioletred;
@@ -84,7 +85,7 @@ justify-content: center;
 align-items: center;
 background-color: transparent;
 border: none;
-padding:0.5% 2%;
+padding:0.5% 5%;
 border-radius: 10px;
 color:${props => props.theme.colors.text}; 
  :hover{

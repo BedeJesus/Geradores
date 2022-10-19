@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Section, Inner_section, Span, Input, Options,Buttons,Button,CopyPaste } from "./styles";
 import { Copy, ArrowCounterClockwise } from 'phosphor-react';
 
@@ -8,12 +8,14 @@ export default function Number() {
 
     const [initialNumber, setInitialNumber] = useState(0)
     const [lastNumber, setLastNumber] = useState(0)
+    const [reload, setReload] = useState(false)
+    const [number, setNumber] = useState(0)
 
+    useEffect(()=>{
+        const value = Math.floor(Math.random() * (lastNumber - initialNumber + 1)) + initialNumber
+        setNumber(value)
+    },[reload,initialNumber,lastNumber])
 
-    function randomNumber() {
-        return Math.floor(Math.random() * (lastNumber - initialNumber + 1)) + initialNumber
-
-    }
 
     function handleOnChangeInitial(e: React.FormEvent<HTMLInputElement>) {
         setInitialNumber(parseInt(e.currentTarget.value))
@@ -21,6 +23,14 @@ export default function Number() {
 
     function handleOnChangeLast(e: React.FormEvent<HTMLInputElement>) {
         setLastNumber(parseInt(e.currentTarget.value))
+    }
+
+    function GenerateOtherNumber() {
+        reload ? setReload(false) : setReload(true)
+    }
+
+    function CopyNumber() {
+        navigator.clipboard.writeText(number.toString())
     }
 
 
@@ -50,17 +60,17 @@ export default function Number() {
 
                 <Inner_section>
                     <Span>Resultado:</Span>
-                    <Input type="number" value={randomNumber()} />
+                    <Input type="number" value={number} />
                 </Inner_section>
 
                 <Buttons>
 
-                        <CopyPaste>
+                        <CopyPaste onClick={()=> CopyNumber()}>
                             <Button> <Copy size={35} weight="fill" /></Button>
                             <Span>Copiar</Span>
                         </CopyPaste>
 
-                        <CopyPaste>
+                        <CopyPaste onClick={() => GenerateOtherNumber()}>
                             <Button> <ArrowCounterClockwise size={30} weight="bold" /> </Button>
                             <Span>Gerar</Span>
                         </CopyPaste>
