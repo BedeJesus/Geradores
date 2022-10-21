@@ -5,7 +5,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin: 1em 3% 1em 3%;
-border: 3px solid white;
+border: 3px solid ${props => props.theme.colors.text};
 border-radius: 10px;
 color: ${props => props.theme.colors.text};
 background-color: ${props => props.theme.colors.primary};
