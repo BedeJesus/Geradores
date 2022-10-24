@@ -15,7 +15,7 @@ export default function Password() {
     useEffect(() => {
 
         const numbers: string[] = ["0", "1", "2", "3", "4", '5', '6', '7', "8", "9"]
-        const symbols: string[] = ["!", "@", "#", "$", "%", "&", "*"]
+        const symbols: string[] = ["!", "@", "#", "$", "%", "&", "*",'(',')','-','/']
         const letters = Array.from(Array(26)).map((_, i) => i + 97)
         const lowerletters = letters.map((letter) => String.fromCharCode(letter))
         const upperLetters = lowerletters.map((letter) => (letter.toUpperCase()))

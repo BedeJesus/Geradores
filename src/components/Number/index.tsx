@@ -59,7 +59,7 @@ export default function Number() {
                 </Options>
 
                 <Inner_section>
-                    <Span>Resultado:</Span>
+                    <Span>Resultado</Span>
                     <Input type="number" value={number} />
                 </Inner_section>
 
