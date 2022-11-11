@@ -1,6 +1,6 @@
 <h1>Geradores</h1>
 👨‍💻 Site que gera senhas e números aleatórios <br>
-🪄 Pequeno projeto para me familiarizar com novas tecnologias<br>
+🪄 Pequeno projeto para me familiarizar com novas tecnologias: Typescript e Styled Components<br>
 🤏🏽 Site totalmente responsivo
 
 <h2>Tecnologias utilizadas</h2>
