@@ -3,7 +3,7 @@
 🪄 Pequeno projeto para me familiarizar com novas tecnologias: Typescript e Styled Components<br>
 🤏🏽 Site totalmente responsivo
 
-<h2>Tecnologias utilizadas</h2>
+<h2>Tecnologias Utilizadas</h2>
     <h3>Front-end:</h3>
     - React JS <br>
     - Typescript <br>
