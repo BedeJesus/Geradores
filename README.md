@@ -1,6 +1,6 @@
 <h1>Geradores</h1>
 👨‍💻 Site que gera senhas e números aleatórios.<br>
-🔢 Oissibilidade de colocar a quantidade de caracteres e copiar com um click.<br>
+🔢 Possibilidade de colocar a quantidade de caracteres e copiar com um click.<br>
 🪄 Pequeno projeto para me familiarizar com novas tecnologias: Typescript e Styled Components.<br>
 🤏🏽 Site totalmente responsivo.
 
