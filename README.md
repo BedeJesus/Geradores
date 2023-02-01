@@ -10,8 +10,8 @@
     - Typescript <br>
     - Styled Components <br>
     
-<h2>Geração de Senhas</h2>  
+<h2>Geração de Senhas (Desktop)</h2>  
 <img src ="for_readme/desktop.gif">
 
-<h2>Geração de Números</h2>  
+<h2>Geração de Números (Mobile)</h2>  
 <img src ="for_readme/mobile.gif">
